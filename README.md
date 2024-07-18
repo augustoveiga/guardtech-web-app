@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Project Structure
 
 ```
-company-website/
+GUARDTECH-WEB-APPLICATION/
 ├── public/
 ├── src/
 │   ├── components/
