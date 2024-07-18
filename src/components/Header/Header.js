@@ -49,7 +49,7 @@ const Header = ({ isSearchVisible, toggleSearchVisibility, setSearchQuery }) => 
         <div className="container header-content">
           <div className="logo">
             <Link to="/" className="logo-link">
-              <img src={logo} alt="Security Services" className="logo-img" />
+              <img src={logo} alt="GuardTech Logo" className="logo-img" />
             </Link>
           </div>
           <nav className="main-navigation">
@@ -74,7 +74,7 @@ const Header = ({ isSearchVisible, toggleSearchVisibility, setSearchQuery }) => 
               </li>
               <li className="nav-item search">
                 <IconButton onClick={toggleSearchVisibility} aria-label="search">
-                  {isSearchVisible ? <CloseIcon style={{ fill: "blue" }} /> : <SearchIcon style={{ fill: "blue" }} />}
+                  {isSearchVisible ? <CloseIcon style={{ fill: "white" }} /> : <SearchIcon style={{ fill: "white" }} />}
                 </IconButton>
               </li>
             </ul>

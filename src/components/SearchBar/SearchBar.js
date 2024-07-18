@@ -24,7 +24,7 @@ const SearchBar = ({ setSearchQuery }) => {
           className="search-input"
         />
         <IconButton type="submit" className="search-submit-icon" aria-label="search">
-          <SearchIcon style={{ fill: "blue" }} />
+          <SearchIcon className="search-submit-icon" />
         </IconButton>
       </form>
     </div>

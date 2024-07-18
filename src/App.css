@@ -2,8 +2,9 @@
 
 :root {
   --background-main: #f9f9f9;
-  --background-header-footer: #ffffff;
-  --background-top-header: #f1f1f1; /* Nova cor para o top header */
+  --background-header-footer: #1a2238;
+  --background-top-header: #ff6347;
+  --background-top-header: #FEC04F;
   --text-main: #333333;
   --link-main: #ff6347;
   --link-hover: #ff4500;
@@ -11,18 +12,43 @@
   --dropdown-text: #333333;
   --dropdown-hover: #ff4500;
   --font-main: 'Roboto', sans-serif;
+  --background-primary-footer: #1a2238;
+  --text-primary-footer: #ffffff;
+  --background-secondary-footer: #ff6347;
+  --background-secondary-footer: #FEC04F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--background-main);
   color: var(--text-main);
   font-family: var(--font-main);
-  margin: 0;
-  padding: 0;
+  height: 100vh; /* Garanta que o body tenha 100% da altura da viewport */
+}
+
+#root {
+  height: 100%; /* Garanta que o root preencha 100% da altura da viewport */
+}
+
+.content {
+  min-height: 100vh; /* Garanta que o content preencha 100% da altura da viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Garanta que o main expanda para preencher o espaço disponível */
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -35,12 +61,7 @@ a:hover {
 }
 
 footer {
-  background-color: var(--background-header-footer);
-  color: var(--text-main);
   text-align: center;
-  padding: 1rem 0;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 

@@ -1,10 +1,9 @@
-// src/components/Footer/Footer.js
 import React from 'react';
-import './Footer.css';
+import './SecondaryFooter.css';
 
-const Footer = () => {
+const SecondaryFooter = () => {
   return (
-    <footer className="site-footer">
+    <footer className="secondary-footer">
       <div className="container">
         <p>&copy; 2024 GUARDTECH. All rights reserved.</p>
       </div>
@@ -12,4 +11,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default SecondaryFooter;

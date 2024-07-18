@@ -1,0 +1,20 @@
+/* src/components/Footer/SecondaryFooter.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.secondary-footer {
+  background-color: var(--background-secondary-footer);
+  color: var(--text-primary-footer);
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.secondary-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
