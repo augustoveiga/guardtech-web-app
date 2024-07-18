@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-  --background-main: #f9f9f9;
-  --background-header-footer: #1a2238;
-  --background-top-header: #ff6347;
-  --background-top-header: #FEC04F;
+  --background-main: #F4F4F4;
+  --background-header-footer: #0A1E5C;
+  --background-top-header: #091743; /* Um tom mais escuro de azul */
+  --accent-color: #FEC04F;
+  --secondary-accent-color: #CACACA;
   --text-main: #333333;
-  --link-main: #ff6347;
-  --link-hover: #ff4500;
-  --dropdown-background: #ffffff;
-  --dropdown-text: #333333;
-  --dropdown-hover: #ff4500;
+  --link-main: #FEC04F;
+  --link-hover: #FEC04F;
+  --dropdown-background: #F4F4F4;
+  --dropdown-text: #0A1E5C;
+  --dropdown-hover: #FEC04F;
+  --background-primary-footer: #0A1E5C;
+  --text-primary-footer: #F4F4F4; /* Cor branca */
+  --background-secondary-footer: #1C1C1C;
+  --text-secondary-footer: #F4F4F4;
   --font-main: 'Roboto', sans-serif;
-  --background-primary-footer: #1a2238;
-  --text-primary-footer: #ffffff;
-  --background-secondary-footer: #ff6347;
-  --background-secondary-footer: #FEC04F;
 }
+
 
 * {
   margin: 0;

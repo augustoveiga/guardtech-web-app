@@ -1,4 +1,4 @@
-/* src/components/Header/Header.css */
+/* Header.css */
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +11,19 @@
   padding: 0.5rem 0;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .top-navigation {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
 .top-nav-list {
@@ -29,6 +39,7 @@
   color: var(--text-primary-footer);
   text-decoration: none;
   font-size: 0.875rem;
+  text-transform: capitalize;
   transition: color 0.3s ease;
 }
 
@@ -37,39 +48,26 @@
   color: var(--link-hover);
 }
 
-.site-header {
-  background-color: var(--background-header-footer);
-  color: var(--text-primary-footer);
-  padding: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: height 0.3s ease;
-}
-
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 15px;
+  height: 80px; /* Altura fixa para o header */
+  overflow: hidden; /* Garantir que o conteúdo não ultrapasse a altura */
 }
 
-.logo {
+.site-header {
+  background-color: var(--background-header-footer);
+  color: var(--text-primary-footer);
   display: flex;
   align-items: center;
+  width: 100%;
+  padding: 0 15px; /* Ajustar padding */
 }
 
-.logo-link {
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  max-height: 80px;
+.logo img {
+  max-height: 80px; /* Ajuste o tamanho do logo */
 }
 
 .main-navigation {
@@ -94,14 +92,13 @@
   color: var(--text-primary-footer);
   text-decoration: none;
   font-size: 1rem;
-  display: flex;
-  align-items: center;
+  text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-item.active .nav-link {
-  color: var(--link-hover);
+  color: var (--link-hover);
 }
 
 .dropdown-menu {
@@ -115,6 +112,7 @@
   padding: 0.5rem 0;
   min-width: 200px;
   border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-item {
@@ -127,11 +125,12 @@
   display: block;
   padding: 0.5rem 1rem;
   white-space: nowrap;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-link:hover {
-  color: var(--dropdown-hover);
+  background-color: var(--link-hover);
+  color: var(--background-header-footer);
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
@@ -186,11 +185,8 @@
   top: 0.5rem;
 }
 
-.header-expanded {
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.header-expanded .header-content {
+  padding: 0 15px;
 }
 
 @media (max-width: 768px) {

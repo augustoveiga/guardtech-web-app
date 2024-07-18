@@ -1,41 +1,48 @@
-/* src/components/SearchBar/SearchBar.css */
-
+/* SearchBar.css */
 .search-bar-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: auto; /* Centralizar verticalmente */
-    margin-bottom: auto; /* Centralizar verticalmente */
-  }
-  
-  .search-input-container {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--text-primary-footer); /* Linha inferior branca */
-    width: 60%; /* Aumentar a largura da barra de pesquisa */
-  }
-  
-  .search-input {
-    width: 100%;
-    border: none;
-    padding: 0.5rem;
-    background: none;
-    outline: none;
-    font-family: var(--font-main); /* Garantir que a fonte seja a mesma do site */
-    font-size: 1rem; /* Ajustar o tamanho da fonte conforme necessário */
-    color: var(--text-primary-footer); /* Cor do texto branco */
-  }
-  
-  .search-input::placeholder {
-    color: var(--text-primary-footer); /* Cor do placeholder branco */
-  }
-  
-  .search-submit-icon {
-    padding: 0 10px;
-    color: var(--text-primary-footer); /* Cor da lupa branca */
-  }
-  
-  .search-submit-icon:hover {
-    color: var(--link-hover); /* Cor da lupa ao passar o mouse */
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--text-primary-footer);
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  background: none;
+  outline: none;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  color: var(--text-primary-footer);
+}
+
+.search-input::placeholder {
+  color: var(--text-primary-footer);
+}
+
+.search-submit-icon {
+  padding: 0 10px;
+  color: var(--text-primary-footer);
+}
+
+.search-submit-icon:hover {
+  color: var(--link-hover);
+}
+
+.MuiIconButton-root {
+  color: var(--text-primary-footer) !important;
+}
+
+.MuiSvgIcon-root {
+  color: var(--text-primary-footer) !important;
+}

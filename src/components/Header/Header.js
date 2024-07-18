@@ -10,12 +10,6 @@ import SearchBar from '../SearchBar/SearchBar';
 const Header = ({ isSearchVisible, toggleSearchVisibility, setSearchQuery }) => {
   const location = useLocation();
 
-  const handleServiceClick = () => {
-    if (isSearchVisible) {
-      toggleSearchVisibility();
-    }
-  };
-
   return (
     <>
       <div className="top-header">
@@ -32,15 +26,11 @@ const Header = ({ isSearchVisible, toggleSearchVisibility, setSearchQuery }) => 
                   <i className="fab fa-linkedin"></i>
                 </a>
               </li>
-              <li className={`top-nav-item ${location.pathname === '/about' ? 'active' : ''}`}>
-                <Link to="/about" className="top-nav-link">About Us</Link>
-              </li>
-              <li className={`top-nav-item ${location.pathname === '/clients' ? 'active' : ''}`}>
-                <Link to="/clients" className="top-nav-link">Clients</Link>
-              </li>
-              <li className={`top-nav-item ${location.pathname === '/blog' ? 'active' : ''}`}>
-                <Link to="/blog" className="top-nav-link">Blog</Link>
-              </li>
+              {['/about', '/clients', '/blog'].map((path, index) => (
+                <li key={index} className={`top-nav-item ${location.pathname === path ? 'active' : ''}`}>
+                  <Link to={path} className="top-nav-link">{path.replace('/', '')}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -55,23 +45,24 @@ const Header = ({ isSearchVisible, toggleSearchVisibility, setSearchQuery }) => 
           <nav className="main-navigation">
             <ul className="nav-list">
               <li className={`nav-item dropdown ${location.pathname.includes('/service') ? 'active' : ''}`}>
-                <span className="nav-link" onClick={handleServiceClick}>
+                <span className="nav-link">
                   Services
                 </span>
                 {!isSearchVisible && (
                   <ul className="dropdown-menu">
-                    <li className="dropdown-item"><Link to="/service1" className="dropdown-link">Service 1</Link></li>
-                    <li className="dropdown-item"><Link to="/service2" className="dropdown-link">Service 2</Link></li>
-                    <li className="dropdown-item"><Link to="/service3" className="dropdown-link">Service 3</Link></li>
+                    {['Service 1', 'Service 2', 'Service 3'].map((service, index) => (
+                      <li key={index} className="dropdown-item">
+                        <Link to={`/service${index + 1}`} className="dropdown-link">{service}</Link>
+                      </li>
+                    ))}
                   </ul>
                 )}
               </li>
-              <li className={`nav-item ${location.pathname === '/trainings' ? 'active' : ''}`}>
-                <Link to="/trainings" className="nav-link">Trainings</Link>
-              </li>
-              <li className={`nav-item ${location.pathname === '/contact' ? 'active' : ''}`}>
-                <Link to="/contact" className="nav-link">Contact Us</Link>
-              </li>
+              {['/trainings', '/contact'].map((path, index) => (
+                <li key={index} className={`nav-item ${location.pathname === path ? 'active' : ''}`}>
+                  <Link to={path} className="nav-link">{path.replace('/', '')}</Link>
+                </li>
+              ))}
               <li className="nav-item search">
                 <IconButton onClick={toggleSearchVisibility} aria-label="search">
                   {isSearchVisible ? <CloseIcon style={{ fill: "white" }} /> : <SearchIcon style={{ fill: "white" }} />}
@@ -81,7 +72,9 @@ const Header = ({ isSearchVisible, toggleSearchVisibility, setSearchQuery }) => 
           </nav>
         </div>
         {isSearchVisible && (
-          <SearchBar setSearchQuery={setSearchQuery} />
+          <div className="search-bar-container">
+            <SearchBar setSearchQuery={setSearchQuery} />
+          </div>
         )}
       </header>
     </>

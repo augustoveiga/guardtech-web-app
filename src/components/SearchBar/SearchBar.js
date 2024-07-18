@@ -1,3 +1,4 @@
+// SearchBar.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
@@ -23,8 +24,8 @@ const SearchBar = ({ setSearchQuery }) => {
           placeholder="Search..."
           className="search-input"
         />
-        <IconButton type="submit" className="search-submit-icon" aria-label="search">
-          <SearchIcon className="search-submit-icon" />
+        <IconButton type="submit" aria-label="search" className="search-submit-icon">
+          <SearchIcon className="search-icon" />
         </IconButton>
       </form>
     </div>
