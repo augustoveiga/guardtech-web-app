@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 import logo from '../../assets/logo.svg'; // ou '../../assets/logo.png'
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
+import CloseIcon from '@mui/icons-material/Close';
+import SearchBar from '../SearchBar/SearchBar';
 
-const Header = () => {
+const Header = ({ isSearchVisible, toggleSearchVisibility, setSearchQuery }) => {
   const location = useLocation();
-  const [searchOpen, setSearchOpen] = useState(false);
 
-  const toggleSearch = () => {
-    setSearchOpen(!searchOpen);
+  const handleServiceClick = () => {
+    if (isSearchVisible) {
+      toggleSearchVisibility();
+    }
   };
 
   return (
@@ -40,7 +45,7 @@ const Header = () => {
           </nav>
         </div>
       </div>
-      <header className="site-header">
+      <header className={`site-header ${isSearchVisible ? 'header-expanded' : ''}`}>
         <div className="container header-content">
           <div className="logo">
             <Link to="/" className="logo-link">
@@ -50,14 +55,16 @@ const Header = () => {
           <nav className="main-navigation">
             <ul className="nav-list">
               <li className={`nav-item dropdown ${location.pathname.includes('/service') ? 'active' : ''}`}>
-                <span className="nav-link">
+                <span className="nav-link" onClick={handleServiceClick}>
                   Services
                 </span>
-                <ul className="dropdown-menu">
-                  <li className="dropdown-item"><Link to="/service1" className="dropdown-link">Service 1</Link></li>
-                  <li className="dropdown-item"><Link to="/service2" className="dropdown-link">Service 2</Link></li>
-                  <li className="dropdown-item"><Link to="/service3" className="dropdown-link">Service 3</Link></li>
-                </ul>
+                {!isSearchVisible && (
+                  <ul className="dropdown-menu">
+                    <li className="dropdown-item"><Link to="/service1" className="dropdown-link">Service 1</Link></li>
+                    <li className="dropdown-item"><Link to="/service2" className="dropdown-link">Service 2</Link></li>
+                    <li className="dropdown-item"><Link to="/service3" className="dropdown-link">Service 3</Link></li>
+                  </ul>
+                )}
               </li>
               <li className={`nav-item ${location.pathname === '/trainings' ? 'active' : ''}`}>
                 <Link to="/trainings" className="nav-link">Trainings</Link>
@@ -66,18 +73,16 @@ const Header = () => {
                 <Link to="/contact" className="nav-link">Contact Us</Link>
               </li>
               <li className="nav-item search">
-                <button className="nav-link search-icon" aria-label="Search" onClick={toggleSearch}>
-                  <i className="fas fa-search"></i>
-                </button>
-                {searchOpen && (
-                  <div className="search-box">
-                    <input type="text" placeholder="Search..." className="search-input" />
-                  </div>
-                )}
+                <IconButton onClick={toggleSearchVisibility} aria-label="search">
+                  {isSearchVisible ? <CloseIcon style={{ fill: "blue" }} /> : <SearchIcon style={{ fill: "blue" }} />}
+                </IconButton>
               </li>
             </ul>
           </nav>
         </div>
+        {isSearchVisible && (
+          <SearchBar setSearchQuery={setSearchQuery} />
+        )}
       </header>
     </>
   );

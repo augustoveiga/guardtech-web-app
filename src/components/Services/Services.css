@@ -1,0 +1,39 @@
+/* src/components/Services/Services.css */
+
+.services-page {
+    padding: 20px;
+    background-color: var(--background-main);
+    color: var(--text-main);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .services-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-item {
+    margin-bottom: 2rem;
+  }
+  
+  .service-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  

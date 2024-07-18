@@ -1,6 +1,5 @@
-// src/components/Services/Service1.js
 import React from 'react';
-import './Services.css';
+import './Service.css';
 
 const Service1 = () => {
   return (

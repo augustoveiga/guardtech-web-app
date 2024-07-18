@@ -1,16 +1,16 @@
-/* src/components/Trainings/Trainings.css */
-.training {
+/* src/components/Services/Service.css */
+.service {
     padding: 20px;
     background-color: var(--background-main);
     color: var(--text-main);
   }
   
-  .training h1 {
+  .service h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
   
-  .training p {
+  .service p {
     font-size: 1rem;
   }
   

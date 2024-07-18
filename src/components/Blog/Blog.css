@@ -1,0 +1,16 @@
+/* src/components/Blog/Blog.css */
+.blog {
+    padding: 20px;
+    background-color: var(--background-main);
+    color: var(--text-main);
+  }
+  
+  .blog h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog p {
+    font-size: 1rem;
+  }
+  

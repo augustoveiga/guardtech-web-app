@@ -1,0 +1,30 @@
+/* src/components/SearchBar/SearchBar.css */
+
+.search-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Centralizar verticalmente */
+    margin-bottom: auto; /* Centralizar verticalmente */
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--text-main);
+    width: 40%; /* Aumentar a largura da barra de pesquisa */
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    background: none;
+    outline: none;
+    font-family: var(--font-main); /* Garantir que a fonte seja a mesma do site */
+    font-size: 1rem; /* Ajustar o tamanho da fonte conforme necessário */
+    color: var(--text-main); /* Garantir que a cor da fonte seja a mesma do site */
+}
+.search-submit-icon {
+    padding: 0 10px;
+}
