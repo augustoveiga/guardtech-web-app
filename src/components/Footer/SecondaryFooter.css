@@ -8,7 +8,6 @@
 .secondary-footer {
   background-color: var(--background-secondary-footer);
   color: var(--text-primary-footer);
-  text-align: center;
   padding: 1rem 0;
   width: 100%;
 }
@@ -17,4 +16,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.secondary-footer p {
+  margin: 0; /* Garantir que não haja margem no parágrafo */
+  text-align: center; /* Centraliza o texto */
 }
