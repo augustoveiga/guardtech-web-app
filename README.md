@@ -2,26 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Project Structure
-
-```
-GUARDTECH-WEB-APPLICATION/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── Header.js
-│   │   ├── Footer.js
-│   │   ├── Home.js
-│   │   ├── About.js
-│   │   ├── Contact.js
-│   ├── App.js
-│   ├── index.js
-├── Dockerfile
-├── .dockerignore
-├── package.json
-├── README.md
-```
-
 ## Available Scripts
 
 In the project directory, you can run:

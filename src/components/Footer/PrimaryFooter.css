@@ -10,6 +10,7 @@
   color: var(--text-primary-footer);
   padding: 2rem 0;
   width: 100%;
+  margin-top: auto; /* Garante que o primary footer fique no fundo da página */
 }
 
 .primary-footer .container {
@@ -34,7 +35,7 @@
 
 .footer-section h4 {
   margin-bottom: 1rem;
-  color: var(--link-main);
+  color: var(--accent-color);
 }
 
 .footer-section ul {
@@ -79,12 +80,12 @@
   border: none;
   flex: 1;
   outline: none;
-  color: var(--text-primary-footer); /* Ajustado para o texto do input */
+  color: var(--text-primary-footer);
   background-color: var(--background-primary-footer);
 }
 
 .newsletter-input::placeholder {
-  color: var(--text-primary-footer); /* Ajustado para a cor do placeholder */
+  color: var(--text-primary-footer);
 }
 
 .newsletter-button {
@@ -92,7 +93,7 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  color: var(--background-primary-footer); /* Ajustado para a cor do ícone no botão */
+  color: var(--background-primary-footer);
 }
 
 .newsletter-button:hover {

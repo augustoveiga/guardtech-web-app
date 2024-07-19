@@ -3,94 +3,58 @@
 :root {
   --background-main: #F4F4F4;
   --background-header-footer: #0A1E5C;
-  --background-top-header: #091743; /* Um tom mais escuro de azul */
+  --background-top-header: #091743;
   --accent-color: #FEC04F;
   --secondary-accent-color: #CACACA;
   --text-main: #333333;
-  --link-main: #FEC04F;
+  --link-main: #333333;
   --link-hover: #FEC04F;
   --dropdown-background: #F4F4F4;
   --dropdown-text: #0A1E5C;
   --dropdown-hover: #FEC04F;
   --background-primary-footer: #0A1E5C;
-  --text-primary-footer: #F4F4F4; /* Cor branca */
+  --text-primary-footer: #F4F4F4;
   --background-secondary-footer: #1C1C1C;
   --text-secondary-footer: #F4F4F4;
   --font-main: 'Roboto', sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 2rem;
+  --font-size-p: 1rem;
+  --header-height: 115px; /* Header (80px) + Top-Header (35px) */
 }
 
 body {
-  background-color: var(--background-main);
-  color: var(--text-main);
   font-family: var(--font-main);
-  height: 100vh; /* Garanta que o body tenha 100% da altura da viewport */
-}
-
-#root {
-  height: 100%; /* Garanta que o root preencha 100% da altura da viewport */
-}
-
-.content {
-  min-height: 100vh; /* Garanta que o content preencha 100% da altura da viewport */
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1; /* Garanta que o main expanda para preencher o espaço disponível */
-}
-
-h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
-  margin: 0;
-  padding: 0;
+  background-color: var(--background-main);
 }
 
-a {
-  color: var(--link-main);
-  text-decoration: none;
+h1 {
+  font-size: var(--font-size-h1);
 }
 
-a:hover {
-  color: var(--link-hover);
+h2 {
+  font-size: var(--font-size-h2);
 }
 
-footer {
-  text-align: center;
-  width: 100%;
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+p {
+  font-size: var(--font-size-p);
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/* Estilos para a barra de busca e resultados */
-.search-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  transition: height 0.3s ease;
-}
-
-.results {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30%;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.result-item {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+.full-width {
   width: 100%;
+  padding: 0;
+  margin: 0;
 }

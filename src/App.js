@@ -10,10 +10,20 @@ import Service1 from './components/Services/Service1';
 import Service2 from './components/Services/Service2';
 import Service3 from './components/Services/Service3';
 import Trainings from './components/Trainings/Trainings';
-import Clients from './components/Clients/Clients';
 import Blog from './components/Blog/Blog';
 import SearchResults from './components/SearchResults/SearchResults';
 import Services from './components/Services/Services';
+import Post1 from './components/Blog/Posts/Post1/Post1';
+import Post2 from './components/Blog/Posts/Post2/Post2';
+import Post3 from './components/Blog/Posts/Post3/Post3';
+import Post4 from './components/Blog/Posts/Post4/Post4';
+import Post5 from './components/Blog/Posts/Post5/Post5';
+import Post6 from './components/Blog/Posts/Post6/Post6';
+import Post7 from './components/Blog/Posts/Post7/Post7';
+import Post8 from './components/Blog/Posts/Post8/Post8';
+import Post9 from './components/Blog/Posts/Post9/Post9';
+import Post10 from './components/Blog/Posts/Post10/Post10';
+import Post11 from './components/Blog/Posts/Post11/Post11';
 import './App.css';
 
 const App = () => {
@@ -32,21 +42,33 @@ const App = () => {
           toggleSearchVisibility={toggleSearchVisibility} 
           setSearchQuery={setSearchQuery} 
         />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/service1" element={<Service1 />} />
-            <Route path="/service2" element={<Service2 />} />
-            <Route path="/service3" element={<Service3 />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/trainings" element={<Trainings />} />
-            <Route path="/clients" element={<Clients />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/search" element={<SearchResults searchQuery={searchQuery} />} />
-          </Routes>
-        </main>
+        <div className="content-wrapper">
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/service1" element={<Service1 />} />
+              <Route path="/service2" element={<Service2 />} />
+              <Route path="/service3" element={<Service3 />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/trainings" element={<Trainings />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/post1" element={<Post1 />} />
+              <Route path="/blog/post2" element={<Post2 />} />
+              <Route path="/blog/post3" element={<Post3 />} />
+              <Route path="/blog/post4" element={<Post4 />} />
+              <Route path="/blog/post5" element={<Post5 />} />
+              <Route path="/blog/post6" element={<Post6 />} />
+              <Route path="/blog/post7" element={<Post7 />} />
+              <Route path="/blog/post8" element={<Post8 />} />
+              <Route path="/blog/post9" element={<Post9 />} />
+              <Route path="/blog/post10" element={<Post10 />} />
+              <Route path="/blog/post11" element={<Post11 />} />
+              <Route path="/search" element={<SearchResults searchQuery={searchQuery} />} />
+            </Routes>
+          </main>
+        </div>
         <PrimaryFooter />
         <SecondaryFooter />
       </div>
