@@ -4,8 +4,8 @@ import Header from './components/Header/Header';
 import PrimaryFooter from './components/Footer/PrimaryFooter';
 import SecondaryFooter from './components/Footer/SecondaryFooter';
 import Home from './components/Home/Home';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
+import AboutUs from './components/AboutUs/AboutUs';
+import ContactUs from './components/ContactUs/ContactUs';
 import Service1 from './components/Services/Service1';
 import Service2 from './components/Services/Service2';
 import Service3 from './components/Services/Service3';
@@ -46,8 +46,8 @@ const App = () => {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/service1" element={<Service1 />} />
               <Route path="/service2" element={<Service2 />} />
               <Route path="/service3" element={<Service3 />} />

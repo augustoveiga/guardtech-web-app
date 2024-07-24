@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
-import logo from '../../assets/logo.svg'; // ou '../../assets/logo.png'
+import logo from '../../assets/logo.svg';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
@@ -254,9 +254,11 @@ const Header = ({ isSearchVisible, toggleSearchVisibility, setSearchQuery }) => 
                   <i className="fab fa-linkedin"></i>
                 </TopNavLink>
               </TopNavItem>
-              {['/about', '/blog'].map((path, index) => (
+              {['/about-us', '/blog'].map((path, index) => (
                 <TopNavItem key={index} className={location.pathname === path ? 'active' : ''}>
-                  <TopNavLink to={path}>{path.replace('/', '')}</TopNavLink>
+                  <TopNavLink to={path}>
+                    {path === '/about-us' ? 'About Us' : path.replace('/', '')}
+                  </TopNavLink>
                 </TopNavItem>
               ))}
             </TopNavList>
@@ -289,8 +291,8 @@ const Header = ({ isSearchVisible, toggleSearchVisibility, setSearchQuery }) => 
               <NavItem className={location.pathname === '/trainings' ? 'active' : ''}>
                 <NavLink onClick={() => handleNavigation('/trainings')}>Trainings</NavLink>
               </NavItem>
-              <NavItem className={location.pathname === '/contact' ? 'active' : ''}>
-                <NavLink onClick={() => handleNavigation('/contact')}>Contact Us</NavLink>
+              <NavItem className={location.pathname === '/contact-us' ? 'active' : ''}>
+                <NavLink onClick={() => handleNavigation('/contact-us')}>Contact Us</NavLink>
               </NavItem>
               <NavItem className="search">
                 <SearchIconWrapper onClick={toggleSearchVisibility} aria-label="search" className="search-icon">

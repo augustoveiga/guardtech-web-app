@@ -104,7 +104,7 @@ const SubmitButton = styled.button`
   }
 `;
 
-const Contact = () => {
+const ContactUs = () => {
   const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
@@ -167,4 +167,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactUs;
