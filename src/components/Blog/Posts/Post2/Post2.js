@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 
 const title = "The Rise of Security Champions in Agile Development";

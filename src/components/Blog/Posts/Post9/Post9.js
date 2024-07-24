@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 const title = "Want to Be Prepared to Respond to Cyber Threats? Train Your Team";
 const date = "June 25, 2024";

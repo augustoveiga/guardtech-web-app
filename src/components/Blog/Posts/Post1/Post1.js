@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 
 const title = "Integrating Security into the SDLC: Best Practices and Benefits";

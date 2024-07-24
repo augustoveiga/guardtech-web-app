@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 // Import the images
 import vulnerabilityManagementImage from './vulnerabilityManagementImage.png';

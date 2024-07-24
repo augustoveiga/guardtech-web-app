@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 const title = "Believing That Security Is Just a Financial Investment Is a Costly Mistake";
 const date = "July 5, 2024";

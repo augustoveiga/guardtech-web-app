@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 const title = "Want to Avoid Phishing? Learn to Thoroughly Investigate Email Headers";
 const date = "June 20, 2024";

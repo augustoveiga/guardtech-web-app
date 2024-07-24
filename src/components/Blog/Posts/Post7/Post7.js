@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 const title = "Understand the Difference Between Pentest, Intrusion Test, and Vulnerability Assessment";
 const date = "July 3, 2024";

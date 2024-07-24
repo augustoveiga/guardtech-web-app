@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 
 const title = "Identifying Code Flaws in Time: How to Prevent Bugs from Becoming Vulnerabilities";

@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 const title = "From DevOps to DevSecOps: A Comprehensive Guide";
 const date = "July 10, 2024";

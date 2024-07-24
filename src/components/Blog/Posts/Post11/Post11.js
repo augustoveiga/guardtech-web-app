@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 const title = "Before Accessing Public Wi-Fi Again, Read This";
 const date = "June 20, 2024";

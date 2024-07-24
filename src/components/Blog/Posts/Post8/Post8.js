@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostPage from '../PostTemplate';
+import BlogPostPage from '../BlogPostPage';
 
 const title = "Want Reliable Results in a Pentest? Develop a Good Penetration Test Notebook";
 const date = "June 28, 2024";
